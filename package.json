@@ -1,0 +1,17 @@
+{
+  "name": "vue-postmessage",
+  "version": "0.0.1",
+  "description": "vue postmessage",
+  "main": "index.js",
+  "scripts": {},
+  "author": "lianfei",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lian-fei/vue-postmessage.git"
+  },
+  "keywords": [
+    "vue",
+    "postmessage"
+  ],
+  "license": "ISC"
+}
