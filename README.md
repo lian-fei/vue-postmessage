@@ -2,7 +2,7 @@
 
 ## Install
 ```
-npm i  vue-postmessage
+npm i vue-postmessage
 ```
 
 ## Usage
