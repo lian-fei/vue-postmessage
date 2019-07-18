@@ -1,6 +1,6 @@
 {
   "name": "vue-postmessage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "vue postmessage",
   "main": "index.js",
   "scripts": {},
@@ -11,7 +11,9 @@
   },
   "keywords": [
     "vue",
-    "postmessage"
+    "postmessage",
+    "window.postmessage",
+    "message"
   ],
   "license": "ISC"
 }
