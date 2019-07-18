@@ -2,17 +2,16 @@ let plugins = {}
 plugins.install = function (Vue, options) {
   var postMessage = 'postMessage'
 
-  Vue.prototype.$postMessage = function(message, target_url, target) {
-    if (!target_url) {return;}
-    target = target || self
+  Vue.prototype.$postMessage = function(message, targetOrigin, target = self) {
+    if (!targetOrigin) {return;}
     if (window[postMessage]) {
-      target[postMessage](message, target_url);
+      target[postMessage](message, targetOrigin);
     } else {
       console.log('window.postMessage is undefined')
     }
   }
 
-  Vue.prototype.$receiveMessage = function (callback, delay) {
+  Vue.prototype.$receiveMessage = function (callback, delay = false) {
     var rm_callback,
 	  addEventListener = 'addEventListener'
 		if (window[postMessage]) {
