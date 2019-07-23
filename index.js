@@ -15,17 +15,17 @@ plugins.install = function (Vue, options) {
     var rm_callback,
 	  addEventListener = 'addEventListener'
 		if (window[postMessage]) {
-		  if (callback && typeof callback === 'function') {
+		  if (callback) {
         rm_callback = function(e) {
           callback(e)
         }
         if (window[addEventListener] ) {
-          window[callback ? addEventListener : 'removeEventListener']('message', rm_callback, delay)
+          window[typeof callback === 'function' ? addEventListener : 'removeEventListener']('message', rm_callback, delay)
         } else {
-          window[callback ? 'attachEvent': 'detachEvent']('onmessage', rm_callback )
+          window[typeof callback === 'function' ? 'attachEvent': 'detachEvent']('onmessage', rm_callback )
         }
 		  } else {
-        console.error('callback is not a function')
+        console.error('callback is undefined')
       }
 		} else {
 		  console.log('window.postMessage is undefined')
